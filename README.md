@@ -1,5 +1,3 @@
-Test repo for faros ai hackathon
+# python-circleci-docker
 
-Test change
-
-Another test change
+Demonstrates how to build, test & deploy a flask python app to Docker Hub then run a Docker container on a server via SSH
