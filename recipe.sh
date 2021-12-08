@@ -16,7 +16,7 @@ curl --request POST \
       "version": "0.0.1",
       "data": {
         "deploy": {
-          "id": "'"$CIRCLE_SHA1"'",
+          "id": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
           "environment": "'"$ENVIRONMENT"'",
           "application": "'"$CIRCLE_PROJECT_REPONAME"'",
           "source": "Github",
@@ -25,7 +25,7 @@ curl --request POST \
           "endTime": "'"$END_TIME"'"
         },
         "artifact": {
-          "id": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
+          "id": "'"$CIRCLE_SHA1"'",
           "repository": "'"$CIRCLE_PROJECT_REPONAME"'",
           "organization": "acs",
           "source": "Docker"
