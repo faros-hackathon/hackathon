@@ -16,17 +16,17 @@ curl --request POST \
       "version": "0.0.1",
       "data": {
         "deploy": {
-          "id": "1237",
+          "id": "'"$CIRCLE_SHA1"'",
           "environment": "'"$ENVIRONMENT"'",
-          "application": "'"$APPLICATION_NAME"'",
+          "application": "'"$CIRCLE_PROJECT_REPONAME"'",
           "source": "Github",
           "status": "Success",
           "startTime": "'"$START_TIME"'",
           "endTime": "'"$END_TIME"'"
         },
         "artifact": {
-          "id": "4",
-          "repository": "pay",
+          "id": "'"$CIRCLE_BUILD_NUM"'",
+          "repository": "'"$CIRCLE_PROJECT_REPONAME"'",
           "organization": "acs",
           "source": "Docker"
         }
