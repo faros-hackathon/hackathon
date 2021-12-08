@@ -20,8 +20,8 @@ jobs:
   deploy-staging:
     docker:
       - image: koalaman/shellcheck-alpine:stable
-	environment:
-		ENVIRONMENT: Staging
+    environment:
+      ENVIRONMENT: Staging
     steps:
       - run:
           name: "Deploy App to staging"
@@ -30,8 +30,8 @@ jobs:
   deploy-production:
     docker:
       - image: koalaman/shellcheck-alpine:stable
-	environment:
-		ENVIRONMENT: Prod
+    environment:
+      ENVIRONMENT: Prod
     steps:
       - run:
           name: "Deploy App to production"
@@ -46,4 +46,3 @@ workflows:
       - build
       - deploy-staging
       - deploy-production
-
