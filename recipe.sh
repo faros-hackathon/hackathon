@@ -25,7 +25,7 @@ curl --request POST \
           "endTime": "'"$END_TIME"'"
         },
         "artifact": {
-          "id": "'"$CIRCLE_BUILD_NUM"'",
+          "id": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
           "repository": "'"$CIRCLE_PROJECT_REPONAME"'",
           "organization": "acs",
           "source": "Docker"
