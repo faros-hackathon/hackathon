@@ -28,7 +28,7 @@ curl --request POST \
           "source": "Docker"
         },
         "run": {
-          "id": "123",
+          "id": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
           "pipeline": "hackathon",
           "organization": "'"$ORGANIZATION"'",
           "source": "Jenkins",
