@@ -27,7 +27,7 @@ curl --request POST \
         "artifact": {
           "id": "'"$CIRCLE_SHA1"'",
           "repository": "'"$CIRCLE_PROJECT_REPONAME"'",
-          "organization": "acs",
+          "organization": "'"$ORGANIZATION"'",
           "source": "Docker"
         }
       }

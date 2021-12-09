@@ -15,10 +15,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Build Image"
-          command: "$CIRCLECI_SHA"
+          name: "Build Artifact"
+          command: sh ./build.sh
   deploy-staging:
-  
     docker:
       - image: cimg/base:stable
     environment:
@@ -27,7 +26,7 @@ jobs:
       - checkout
       - run:
           name: "Deploy App to staging"
-          command: sh ./recipe.sh
+          command: sh ./deploy.sh
 
   deploy-production:
     docker:
@@ -38,7 +37,7 @@ jobs:
       - checkout
       - run:
           name: "Deploy App to production"
-          command: sh ./recipe.sh
+          command: sh ./deploy.sh
 
 
 # Invoke jobs via workflows
