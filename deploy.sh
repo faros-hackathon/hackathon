@@ -16,7 +16,7 @@ curl --request POST \
       "version": "0.0.1",
       "data": {
         "deploy": {
-          "id": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
+          "id": "'"$CIRCLE_WORKFLOW_ID"'",
           "environment": "'"$ENVIRONMENT"'",
           "application": "'"$CIRCLE_PROJECT_REPONAME"'",
           "source": "Github",

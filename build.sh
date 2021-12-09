@@ -16,16 +16,10 @@ curl --request POST \
       "version": "0.0.1",
       "data": {
         "commit": {
-          "sha": "'"$CIRCLE_WORKFLOW_JOB_ID"'",
+          "sha": "'"$CIRCLE_SHA1"'",
           "repository": "'"$CIRCLE_PROJECT_REPONAME"'",
-          "organization": "acs",
-          "source": "Github"
-          "environment": "'"$ENVIRONMENT"'",
-          "application": "'"$CIRCLE_PROJECT_REPONAME"'",
-          "source": "Github",
-          "status": "Success",
-          "startTime": "'"$START_TIME"'",
-          "endTime": "'"$END_TIME"'"
+          "organization": "'"$ORGANIZATION"'",
+          "source": "GitHub"
         },
         "artifact": {
           "id": "'"$CIRCLE_SHA1"'",
@@ -34,13 +28,14 @@ curl --request POST \
           "source": "Docker"
         },
         "run": {
-          "id": "'"$CIRCLE_SHA1"'",
-          "pipeline": "payments-service-ci",
-          "organization": "acme-corp",
+          "id": "123",
+          "pipeline": "hackathon",
+          "organization": "'"$ORGANIZATION"'",
           "source": "Jenkins",
           "status": "Success",
           "startTime": "'"$START_TIME"'",
           "endTime": "'"$END_TIME"'"
         }
       }
-    }'
+    }'     
+    
